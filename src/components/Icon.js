@@ -11,19 +11,12 @@ const Icon = ({ name, className = '', size = 'md', ...restProps }) => {
   const sizeClasses = {
     sm: 'icon--small',
     md: 'icon--medium',
-    lg: 'icon--large'
+    lg: 'icon--large',
   };
-  
+
   const iconClass = `icon icon-${name} ${sizeClasses[size] || ''} ${className}`;
-  
-  return (
-    <span 
-      className={iconClass}
-      role="img"
-      aria-hidden="true"
-      {...restProps}
-    />
-  );
+
+  return <span className={iconClass} role="img" aria-hidden="true" {...restProps} />;
 };
 
 export default Icon;
