@@ -1,6 +1,5 @@
 const API_URL = 'https://petstore.swagger.io/v2';
 
-// Получение списка животных по статусу
 export const fetchPetsByStatus = async (status = 'available') => {
   try {
     const response = await fetch(`${API_URL}/pet/findByStatus?status=${status}`);
