@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* Компонент App */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.app-content {
+  flex: 1;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.app-footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Компонент Button */
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #0069d9;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Компонент PetList */
+.pet-list {
+  margin-bottom: 1rem;
+}
+
+.pet-list__items {
+  list-style: none;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.pet-list__item {
+  border-bottom: 1px solid #ddd;
+}
+
+.pet-list__item:last-child {
+  border-bottom: none;
+}
+
+.pet-list__item-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pet-list__item-btn:hover {
+  background-color: #f8f9fa;
+}
+
+.pet-list__item-status {
+  font-size: 0.875rem;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25rem;
+}
+
+.pet-list__item-status--available {
+  background-color: #28a745;
+  color: white;
+}
+
+.pet-list__item-status--pending {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.pet-list__item-status--sold {
+  background-color: #dc3545;
+  color: white;
+}
+
+.pet-list__empty {
+  padding: 1rem;
+  text-align: center;
+  color: #6c757d;
+}
+
+/* Компонент PetDetail */
+.pet-detail {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  background-color: white;
+}
+
+.pet-detail__title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.pet-detail__row {
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.pet-detail__label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  min-width: 100px;
+}
+
+.pet-detail__value--available {
+  color: #28a745;
+}
+
+.pet-detail__value--pending {
+  color: #ffc107;
+}
+
+.pet-detail__value--sold {
+  color: #dc3545;
+}
+
+.pet-detail__tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pet-detail__tag {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pet-detail__empty {
+  padding: 1rem;
+  text-align: center;
+  color: #6c757d;
+}
