@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
-import { fetchPetsByStatus, validatePet } from '../api/api';
+import { fetchPetsByStatus, validatePet } from '../api/pets';
 
 const MAX_DISPLAYED_PETS = parseInt(process.env.REACT_APP_MAX_DISPLAYED_PETS || '5', 10);
 

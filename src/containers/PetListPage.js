@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PetList from '../components/PetList';
 import Button from '../components/Button';
-import { fetchPetsByStatus, validatePet } from '../api/api';
+import { fetchPetsByStatus, validatePet } from '../api/pets';
 
 const PetListPage = () => {
   const navigate = useNavigate();
