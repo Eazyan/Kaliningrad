@@ -176,10 +176,4 @@ body {
   border-radius: 0.25rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.pet-detail__empty {
-  padding: 1rem;
-  text-align: center;
-  color: #6c757d;
-}
+} 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
-import { fetchPetsByStatus, validatePet } from '../api/pets';
+import { fetchPets } from '../api/pets';
 
 const MAX_DISPLAYED_PETS = parseInt(process.env.REACT_APP_MAX_DISPLAYED_PETS || '5', 10);
 
@@ -15,13 +15,7 @@ const HomePage = () => {
     setError(null);
 
     try {
-      const data = await fetchPetsByStatus('available');
-
-      const validatedPets = data
-        .map(validatePet)
-        .filter((result) => result.valid)
-        .map((result) => result.data);
-
+      const validatedPets = await fetchPets('available');
       setPets(validatedPets);
     } catch (err) {
       setError('Не удалось загрузить данные. Попробуйте позже.');

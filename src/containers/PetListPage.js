@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PetList from '../components/PetList';
 import Button from '../components/Button';
-import { fetchPetsByStatus, validatePet } from '../api/pets';
+import { fetchPets } from '../api/pets';
 
 const PetListPage = () => {
   const navigate = useNavigate();
@@ -16,13 +16,7 @@ const PetListPage = () => {
     setError(null);
 
     try {
-      const data = await fetchPetsByStatus(status);
-
-      const validatedPets = data
-        .map(validatePet)
-        .filter((result) => result.valid)
-        .map((result) => result.data);
-
+      const validatedPets = await fetchPets(status);
       setPets(validatedPets);
     } catch (err) {
       setError('Не удалось загрузить данные. Попробуйте позже.');
